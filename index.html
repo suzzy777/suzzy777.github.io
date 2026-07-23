@@ -127,41 +127,7 @@
   .hero p.lede{font-size:19px;max-width:56ch;color:var(--ink);margin-bottom:14px}
   .hero p.sub{color:var(--ink-soft);max-width:56ch}
 
-  /* Signature: flaky test runner */
-  .runner{
-    margin-top:34px;
-    background:var(--panel);
-    border:1px solid var(--hairline);
-    border-radius:8px;
-    padding:16px 20px;
-    font-family:var(--mono);
-    font-size:13.5px;
-    display:flex;
-    align-items:center;
-    gap:14px;
-    flex-wrap:wrap;
-    max-width:560px;
-  }
-  .runner .prompt{color:var(--ink-soft)}
-  .runner .cmd{color:var(--ink)}
-  .chip{
-    font-family:var(--mono);
-    font-size:12px;
-    font-weight:500;
-    letter-spacing:.08em;
-    padding:3px 12px;
-    border-radius:99px;
-    margin-left:auto;
-  }
-  .chip.pass{background:var(--pass-soft);color:var(--pass)}
-  .chip.fail{background:var(--fail-soft);color:var(--fail)}
-  .runner .note{
-    flex-basis:100%;
-    font-size:11.5px;
-    color:var(--ink-soft);
-  }
 
-  /* Publications */
   .pub{
     display:grid;
     grid-template-columns:72px 1fr;
@@ -297,7 +263,7 @@
   <main>
 
     <section class="hero" id="about">
-      <h1>I make software tests <em>trustworthy</em>.</h1>
+      <div class="eyebrow">01 · About</div>
       <p class="lede">
         I'm a PhD candidate in Computer Science at George Mason University, advised by
         <a href="https://www.cs.gmu.edu/~winglam/" target="_blank" rel="noopener">Wing Lam</a>.
@@ -310,13 +276,6 @@
         faster and more reliable, with recent work on ranking and efficiently searching for the
         tests responsible for order-dependent flaky failures. Expected graduation: May 2027.
       </p>
-
-      <div class="runner" role="img" aria-label="A terminal running a flaky test that flickers between fail and pass before stabilizing">
-        <span class="prompt">$</span>
-        <span class="cmd">mvn&nbsp;test&nbsp;-Dtest=OrderDependentTest</span>
-        <span class="chip pass" id="flaky-chip">PASS</span>
-        <span class="note" id="flaky-note">Run it again — you might get a different answer. That's the problem I work on.</span>
-      </div>
     </section>
 
     <section id="publications">
@@ -516,29 +475,5 @@
   </main>
 </div>
 
-<script>
-(function(){
-  var chip = document.getElementById('flaky-chip');
-  if (!chip) return;
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) return; // show static PASS
-
-  // Flicker between FAIL and PASS a few times, then settle on PASS.
-  var sequence = ['FAIL','PASS','FAIL','PASS'];
-  var i = 0;
-  function step(){
-    if (i >= sequence.length) {
-      chip.textContent = 'PASS';
-      chip.className = 'chip pass';
-      return;
-    }
-    var s = sequence[i++];
-    chip.textContent = s;
-    chip.className = 'chip ' + (s === 'FAIL' ? 'fail' : 'pass');
-    setTimeout(step, i < sequence.length ? 650 : 0);
-  }
-  setTimeout(step, 900);
-})();
-</script>
 </body>
 </html>
