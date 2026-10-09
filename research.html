@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research | Suzzana Rafi</title>
+<meta name="description" content="Research projects of Suzzana Rafi on flaky tests and software testing.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='10' y='10' width='20' height='20' fill='%23ff6f61'/%3E%3Crect x='2' y='2' width='20' height='20' fill='%230e9aa7'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>Suzzana Rafi</a>
+    <nav class="tabs" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="awards.html">Awards</a>
+    </nav>
+    <a class="cv-link" href="Suzzana_Rafi_CV.pdf">CV</a>
+  </div>
+</header>
+
+<main>
+<section class="band">
+  <div class="wrap">
+    <h1>Research</h1>
+    <p>Detecting, repairing and reproducing flaky tests, which are tests that pass and fail non-deterministically on the same version of code.</p>
+    <div class="runs" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><h2>Projects</h2></div>
+    <ol class="work">
+      <li>
+        <div>
+          <p class="theme">Flaky tests</p>
+          <h3>A Dataset of Reproducible Flaky-Test Failures</h3>
+          <p>Flaky tests may pass or fail inconsistently when executed on the same code version, making them difficult to reproduce and repair. This work introduces ReproFlake, a dataset of 1,115 reproducible flaky tests. The dataset includes reproducible environments, reproduction and validation scripts, and execution logs to support research on flaky-tests. The work also analyzes the challenges of reproducing flaky failures and the characteristics of flaky-test fixes across different flakiness categories.</p>
+          <div class="links"><a class="main" href="https://dl.acm.org/doi/epdf/10.1145/3832216">Paper</a><a href="https://sites.google.com/view/reproflakedataset">Dataset</a></div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="theme">Flaky tests</p>
+          <h3>Optimizing Search for Tests Relevant to Order-Dependent Flaky Tests</h3>
+          <p>This work improves the process of finding the tests responsible for order-dependent failures by enhancing the delta-debugging search used in iFixFlakies. The proposed techniques use hierarchical information, historical execution data, TF-IDF similarity, and LLM-based similarity to guide the search and reduce the number of test executions needed to locate relevant tests.</p>
+          <div class="links"><a class="main" href="https://people.cs.gmu.edu/~winglam/publications/2026/RafiETAL26DD.pdf">Paper</a></div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="theme">Flaky tests</p>
+          <h3>Ranking Relevant Tests for Order-Dependent Flaky Tests</h3>
+          <p>Regression testing faces challenges from flaky tests, which are tests that may pass or fail inconsistently for the same code version. A substantial type of flaky test is the order-dependent flaky test, where the outcome depends on the test execution order. This work introduces two methods to rank tests that cause order-dependent failures. The first method uses LLM to analyze the content of test methods, and the second method employs statistical analysis on past test-order execution data.</p>
+          <div class="links"><a class="main" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=11029933">Paper</a></div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="theme">Software testing education</p>
+          <h3>ChatGPT and Software Testing Education: Promises &amp; Perils</h3>
+          <p>We examine how well ChatGPT performs when tasked with answering common questions in a popular software testing curriculum.</p>
+          <div class="links"><a class="main" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=10132255">Paper</a></div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="theme">Earlier work</p>
+          <h3>A Systematic Review on the Use of AI and ML for Fighting the COVID-19 Pandemic</h3>
+          <p>Performed a systematic review of AI/ML approaches for COVID-19, analyzing 49 selected studies to synthesize models, data types, applications, and key research gaps.</p>
+          <div class="links"><a class="main" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8545030/pdf/tai-islam-3062771.pdf">Paper</a></div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="theme">Earlier work</p>
+          <h3>Android Malware Detection using Machine Learning</h3>
+          <p>A project on Android malware detection using machine learning techniques. Our project shows that decision tree based algorithms perform best in identifying malware from benign applications.</p>
+          <div class="links"><a class="main" href="https://dl.acm.org/doi/epdf/10.1145/3428363.3428375">Paper</a></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span>&copy; 2026 Suzzana Rafi</span>
+    <a href="mailto:suzzanarafi@gmail.com">suzzanarafi@gmail.com</a>
+    <span>1 run, 1 passed, 0 flaky</span>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
